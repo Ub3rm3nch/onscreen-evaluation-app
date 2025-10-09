@@ -21,6 +21,8 @@ export default function ViewerPage({ session, onBack, onUpdateSession }) {
   const [marksByQuestion, setMarksByQuestion] = useState({})
   const [maxMarksByQuestion, setMaxMarksByQuestion] = useState({ Q1: 5, Q2: 10, Q3: 10 })
   const [statusText, setStatusText] = useState('')
+  const [showCompletionForm, setShowCompletionForm] = useState(false)
+  const [dummyNumber, setDummyNumber] = useState('')
 
   const isImage = useMemo(() => /\.(png|jpe?g|gif|webp|bmp)$/i.test(session.fileUrl), [session.fileUrl])
   const isPdf = useMemo(() => /\.pdf$/i.test(session.fileUrl), [session.fileUrl])
@@ -172,17 +174,58 @@ export default function ViewerPage({ session, onBack, onUpdateSession }) {
   }, [marksByQuestion, maxMarksByQuestion])
 
   async function complete(type) {
-    setStatusText(type === 'complete' ? 'Completing…' : 'Rejecting…')
+    if (type === 'complete') {
+      setShowCompletionForm(true)
+      return
+    }
+    
+    // Handle rejection
+    setStatusText('Rejecting…')
     try {
-      const url = type === 'complete'
-        ? `${API_BASE}/api/evaluations/${session.evaluationId}/complete`
-        : `${API_BASE}/api/evaluations/${session.evaluationId}/reject`
-      const res = await fetch(url, { method: 'POST' })
+      const res = await fetch(`${API_BASE}/api/evaluations/${session.evaluationId}/reject`, { method: 'POST' })
       if (!res.ok) throw new Error('Action failed')
       await res.json()
-      setStatusText(type === 'complete' ? 'Completed' : 'Rejected')
+      setStatusText('Rejected')
     } catch (e) {
       setStatusText('Failed')
+    }
+  }
+
+  async function handleCompleteWithDummy() {
+    if (!dummyNumber.trim()) {
+      setStatusText('Please enter dummy number')
+      return
+    }
+
+    setStatusText('Completing…')
+    try {
+      // Calculate total marks
+      const totalMarks = Object.values(marksByQuestion).reduce((sum, mark) => sum + (Number(mark) || 0), 0)
+      
+      // Complete the evaluation
+      const evalRes = await fetch(`${API_BASE}/api/evaluations/${session.evaluationId}/complete`, { method: 'POST' })
+      if (!evalRes.ok) throw new Error('Failed to complete evaluation')
+      
+      // Add record
+      const recordRes = await fetch(`${API_BASE}/api/records`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dummyNumber: dummyNumber.trim(),
+          answerScriptFilename: session.fileUrl.split('/').pop(),
+          answerScriptUrl: session.fileUrl,
+          totalMarks,
+          evaluationId: session.evaluationId
+        })
+      })
+      
+      if (!recordRes.ok) throw new Error('Failed to save record')
+      
+      setStatusText('Completed and saved')
+      setShowCompletionForm(false)
+      setDummyNumber('')
+    } catch (e) {
+      setStatusText('Failed to complete')
     }
   }
 
@@ -259,6 +302,45 @@ export default function ViewerPage({ session, onBack, onUpdateSession }) {
           <button className="btn secondary" onClick={() => complete('complete')}>Complete Correction</button>
           <button className="btn ghost" onClick={() => complete('reject')}>Reject Script</button>
         </div>
+        
+        {/* Completion Form Modal */}
+        {showCompletionForm && (
+          <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000
+          }}>
+            <div style={{
+              background: 'white',
+              padding: '24px',
+              borderRadius: '8px',
+              minWidth: '300px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+            }}>
+              <h3 style={{ marginTop: 0 }}>Complete Evaluation</h3>
+              <p>Enter the dummy number (anonymized student ID) for this answer script:</p>
+              <input
+                className="input"
+                type="text"
+                placeholder="e.g., D001, S123, etc."
+                value={dummyNumber}
+                onChange={e => setDummyNumber(e.target.value)}
+                style={{ width: '100%', marginBottom: '16px' }}
+              />
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <button className="btn" onClick={handleCompleteWithDummy}>Complete & Save</button>
+                <button className="btn ghost" onClick={() => setShowCompletionForm(false)}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

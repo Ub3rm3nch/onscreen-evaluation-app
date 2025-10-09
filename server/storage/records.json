@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "id": "1759987853065",
+      "dummyNumber": "ddd",
+      "answerScriptFilename": "ca59fc01-f0f4-4262-a8a9-c19038bb02ad_CH.SC.U4CSE24005_WS1.pdf",
+      "answerScriptUrl": "http://localhost:4000/uploads/ca59fc01-f0f4-4262-a8a9-c19038bb02ad_CH.SC.U4CSE24005_WS1.pdf",
+      "totalMarks": 15,
+      "evaluationId": "d5f7a957-4f72-4136-86aa-6172c44ddc6b",
+      "createdAt": "2025-10-09T05:30:53.065Z"
+    },
+    {
+      "id": "1759987881935",
+      "dummyNumber": "aaa",
+      "answerScriptFilename": "13f23a5f-8a93-42f4-9d26-c7892ff3dcf5_CH.SC.U4CSE24005_WS2.pdf",
+      "answerScriptUrl": "http://localhost:4000/uploads/13f23a5f-8a93-42f4-9d26-c7892ff3dcf5_CH.SC.U4CSE24005_WS2.pdf",
+      "totalMarks": 15,
+      "evaluationId": "b7c11f1c-3b69-42d3-aa73-0bcdda6a16c0",
+      "createdAt": "2025-10-09T05:31:21.935Z"
+    },
+    {
+      "id": "1759987978883",
+      "dummyNumber": "vvvv",
+      "answerScriptFilename": "239035bf-9485-4a83-9fcb-d91b012aca9e_CH.SC.U4CSE24005_WS3.pdf",
+      "answerScriptUrl": "http://localhost:4000/uploads/239035bf-9485-4a83-9fcb-d91b012aca9e_CH.SC.U4CSE24005_WS3.pdf",
+      "totalMarks": 7,
+      "evaluationId": "46761c9a-8b75-4789-ba5c-3d5d312b1aaf",
+      "createdAt": "2025-10-09T05:32:58.883Z"
+    },
+    {
+      "id": "1759988424061",
+      "dummyNumber": "DDDDD",
+      "answerScriptFilename": "5422af1e-a6d0-4c08-9aaa-87de7565a6b8_CH.SC.U4CSE24005_WS3.pdf",
+      "answerScriptUrl": "http://localhost:4000/uploads/5422af1e-a6d0-4c08-9aaa-87de7565a6b8_CH.SC.U4CSE24005_WS3.pdf",
+      "totalMarks": 15,
+      "evaluationId": "5b4e46d4-4fd5-43db-8759-070811a740b4",
+      "createdAt": "2025-10-09T05:40:24.061Z"
+    },
+    {
+      "id": "1759989646590",
+      "dummyNumber": "rr",
+      "answerScriptFilename": "abf63961-c383-45f1-8067-bc83d65ad0f3_CH.SC.U4CSE24005_WS3.pdf",
+      "answerScriptUrl": "http://localhost:4000/uploads/abf63961-c383-45f1-8067-bc83d65ad0f3_CH.SC.U4CSE24005_WS3.pdf",
+      "totalMarks": 0,
+      "evaluationId": "df4b1f3e-3c7a-493b-9eae-41648ad4bdb8",
+      "createdAt": "2025-10-09T06:00:46.590Z"
+    }
+  ]
+}

@@ -161,6 +161,191 @@
       },
       "status": "completed",
       "updatedAt": "2025-10-08T17:07:23.302Z"
+    },
+    "cdc783a8-16d1-41de-a062-0eb72d328b08": {
+      "id": "cdc783a8-16d1-41de-a062-0eb72d328b08",
+      "fileId": "dbd53e77-f1b8-4f80-a749-291765fdb21a_CH.SC.U4CSE24005_WS1.pdf",
+      "marksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 5,
+        "Q4": 6
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10,
+        "Q4": 10,
+        "Q5": 10
+      },
+      "status": "in_progress",
+      "updatedAt": "2025-10-09T05:28:32.192Z"
+    },
+    "9e76d268-c8a4-4c72-b38d-71630f7b9201": {
+      "id": "9e76d268-c8a4-4c72-b38d-71630f7b9201",
+      "fileId": "cdc4a387-50af-4346-babc-10c9f69d8216_CH.SC.U4CSE24005_WS1.pdf",
+      "marksByQuestion": {},
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "in_progress",
+      "updatedAt": "2025-10-09T05:28:45.692Z"
+    },
+    "94b194e6-e2b5-437f-81f8-9b21cfb25cf4": {
+      "id": "94b194e6-e2b5-437f-81f8-9b21cfb25cf4",
+      "fileId": "d11c836c-dc03-466b-ab60-86b1a2cc33b3_CH.SC.U4CSE24005_WS1.pdf",
+      "marksByQuestion": {
+        "Q1": 2,
+        "Q2": 3,
+        "Q3": 4
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T05:29:15.859Z"
+    },
+    "d5f7a957-4f72-4136-86aa-6172c44ddc6b": {
+      "id": "d5f7a957-4f72-4136-86aa-6172c44ddc6b",
+      "fileId": "ca59fc01-f0f4-4262-a8a9-c19038bb02ad_CH.SC.U4CSE24005_WS1.pdf",
+      "marksByQuestion": {
+        "Q1": 5,
+        "Q2": 5,
+        "Q3": 5
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T05:30:53.052Z"
+    },
+    "b7c11f1c-3b69-42d3-aa73-0bcdda6a16c0": {
+      "id": "b7c11f1c-3b69-42d3-aa73-0bcdda6a16c0",
+      "fileId": "13f23a5f-8a93-42f4-9d26-c7892ff3dcf5_CH.SC.U4CSE24005_WS2.pdf",
+      "marksByQuestion": {
+        "Q1": 2,
+        "Q2": 5,
+        "Q3": 8
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T05:31:21.909Z"
+    },
+    "46761c9a-8b75-4789-ba5c-3d5d312b1aaf": {
+      "id": "46761c9a-8b75-4789-ba5c-3d5d312b1aaf",
+      "fileId": "239035bf-9485-4a83-9fcb-d91b012aca9e_CH.SC.U4CSE24005_WS3.pdf",
+      "marksByQuestion": {
+        "Q1": 5,
+        "Q2": 1,
+        "Q3": 1
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T05:32:58.858Z"
+    },
+    "e51a7078-98ac-41be-9ff3-03aebb74e71f": {
+      "id": "e51a7078-98ac-41be-9ff3-03aebb74e71f",
+      "fileId": "0fcabe78-6fa2-415c-bff4-f35ebd4a8c6c_CH.SC.U4CSE24005_WS1.pdf",
+      "marksByQuestion": {},
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "in_progress",
+      "updatedAt": "2025-10-09T05:34:09.663Z"
+    },
+    "5b4e46d4-4fd5-43db-8759-070811a740b4": {
+      "id": "5b4e46d4-4fd5-43db-8759-070811a740b4",
+      "fileId": "5422af1e-a6d0-4c08-9aaa-87de7565a6b8_CH.SC.U4CSE24005_WS3.pdf",
+      "marksByQuestion": {
+        "Q1": 5,
+        "Q2": 5,
+        "Q3": 5
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T05:40:24.052Z"
+    },
+    "59938935-2bac-4be5-b775-7825ac6dc05c": {
+      "id": "59938935-2bac-4be5-b775-7825ac6dc05c",
+      "fileId": "5383024f-e4d4-4831-a080-3021d41eebae_CH.SC.U4CSE24005_WS3.pdf",
+      "marksByQuestion": {},
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "in_progress",
+      "updatedAt": "2025-10-09T05:42:31.484Z"
+    },
+    "d12159ef-891c-4f87-bc8a-e7344ecab5cf": {
+      "id": "d12159ef-891c-4f87-bc8a-e7344ecab5cf",
+      "fileId": "828ae0bc-7aef-4da5-b121-7b455aad4730_CH.SC.U4CSE24005_WS4.pdf",
+      "marksByQuestion": {},
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "in_progress",
+      "updatedAt": "2025-10-09T05:43:02.575Z"
+    },
+    "b0f08f0e-76d1-47a7-8556-438df370d491": {
+      "id": "b0f08f0e-76d1-47a7-8556-438df370d491",
+      "fileId": "97ced1ec-dbba-4ebb-b220-edf9b72c2676_CH.SC.U4CSE24005_WS1.pdf",
+      "marksByQuestion": {},
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "in_progress",
+      "updatedAt": "2025-10-09T05:52:02.073Z"
+    },
+    "1a4344d6-af37-422b-874f-3336ae7ad0e7": {
+      "id": "1a4344d6-af37-422b-874f-3336ae7ad0e7",
+      "fileId": "e5052cdc-e9ca-4191-856f-832116ed88ef_CH.SC.U4CSE24005_WS2.pdf",
+      "marksByQuestion": {
+        "Q1": 5
+      },
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T05:59:23.409Z"
+    },
+    "df4b1f3e-3c7a-493b-9eae-41648ad4bdb8": {
+      "id": "df4b1f3e-3c7a-493b-9eae-41648ad4bdb8",
+      "fileId": "abf63961-c383-45f1-8067-bc83d65ad0f3_CH.SC.U4CSE24005_WS3.pdf",
+      "marksByQuestion": {},
+      "maxMarksByQuestion": {
+        "Q1": 5,
+        "Q2": 10,
+        "Q3": 10
+      },
+      "status": "completed",
+      "updatedAt": "2025-10-09T06:00:46.562Z"
     }
   }
 }

@@ -172,5 +172,3 @@ export default function PdfAnnotator({ url, tool, penColor, penSize, onStatus })
     <div ref={containerRef} style={{ padding: 8, width: '100%' }} />
   )
 }
-
-

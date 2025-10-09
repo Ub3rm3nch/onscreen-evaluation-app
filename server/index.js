@@ -9,7 +9,11 @@ import {
   getEvaluationById,
   upsertEvaluation,
   setEvaluationStatus,
-  ensureStorageReady
+  ensureStorageReady,
+  getAllRecords,
+  addRecord,
+  updateRecord,
+  deleteRecord
 } from './storage/storage.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -112,6 +116,59 @@ app.post('/api/evaluations/:id/reject', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to reject evaluation' });
+  }
+});
+
+// Records API endpoints
+app.get('/api/records', async (req, res) => {
+  try {
+    const records = await getAllRecords();
+    res.json(records);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load records' });
+  }
+});
+
+app.post('/api/records', async (req, res) => {
+  try {
+    const { dummyNumber, answerScriptFilename, answerScriptUrl, totalMarks, evaluationId } = req.body;
+    if (!dummyNumber || !answerScriptFilename || totalMarks === undefined) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
+    const record = await addRecord({
+      dummyNumber,
+      answerScriptFilename,
+      answerScriptUrl,
+      totalMarks: Number(totalMarks),
+      evaluationId
+    });
+    res.json(record);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to add record' });
+  }
+});
+
+app.put('/api/records/:id', async (req, res) => {
+  try {
+    const record = await updateRecord(req.params.id, req.body);
+    if (!record) return res.status(404).json({ error: 'Record not found' });
+    res.json(record);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to update record' });
+  }
+});
+
+app.delete('/api/records/:id', async (req, res) => {
+  try {
+    const success = await deleteRecord(req.params.id);
+    if (!success) return res.status(404).json({ error: 'Record not found' });
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to delete record' });
   }
 });
 

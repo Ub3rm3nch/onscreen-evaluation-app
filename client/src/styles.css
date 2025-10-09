@@ -1,0 +1,46 @@
+:root {
+  --beige-bg: #f3efe6;
+  --beige-panel: #f8f4eb;
+  --accent: #5b4b3a;
+  --accent-2: #876b53;
+  --border: #d9d0c4;
+}
+
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--beige-bg); color: #2b2b2b; }
+
+.app-shell { display: flex; flex-direction: column; height: 100%; }
+.topbar { height: 56px; display:flex; align-items:center; padding: 0 16px; border-bottom: 1px solid var(--border); background: var(--beige-panel); color: var(--accent); font-weight: 600; }
+
+.content { flex: 1; display: flex; min-height: 0; }
+
+.upload-card { max-width: 720px; margin: 48px auto; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.upload-actions { display:flex; gap: 12px; align-items:center; }
+.btn { background: var(--accent); color: #fff; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.btn.secondary { background: var(--accent-2); }
+.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.input { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; background: #fff; }
+
+.viewer-shell { display:flex; flex:1; min-height:0; }
+.viewer-main { flex:1; display:flex; flex-direction:column; min-width:0; }
+.toolbar { display:flex; gap:8px; padding:10px; border-bottom:1px solid var(--border); background: var(--beige-panel); }
+.canvas-wrap { flex:1; position:relative; background:#fff; display:flex; align-items:center; justify-content:center; overflow:auto; }
+.canvas-inner { position:relative; }
+.doc-img { max-width: 100%; height: auto; display:block; }
+canvas.annotation { position:absolute; left:0; top:0; }
+
+.side { width: 320px; border-left:1px solid var(--border); background: var(--beige-panel); padding: 12px; overflow:auto; }
+.side h3 { margin: 8px 0 12px; color: var(--accent); }
+.q-row { display:grid; grid-template-columns: 1fr 100px 100px; gap:8px; align-items:center; padding: 6px 0; }
+.q-row input { width:100%; }
+.side .actions { display:flex; gap:8px; margin-top: 12px; }
+
+@media (max-width: 900px) {
+  .side { width: 100%; order: 2; }
+  .viewer-shell { flex-direction: column; }
+}
+
+
+
+

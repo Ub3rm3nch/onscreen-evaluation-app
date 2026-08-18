@@ -22,7 +22,7 @@ npm start
 
 3) Run frontend (port 5173 by default)
 ```
-cd onscreen-eval/client
+cd onscreen-eval/frontend
 npm run dev
 ```
 

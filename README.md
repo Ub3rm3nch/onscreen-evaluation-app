@@ -33,7 +33,7 @@ npm run dev
 - Upload scanned answer sheets (images or PDFs)
 - Annotate images with freehand pen and tick/cross stamps
 - Enter per‑question marks with validation
-- Save progress, complete, or reject a script
+- Save progress and complete
 
 ### Notes
 - PDF annotation is not implemented in this prototype. PDFs display in‑browser; annotations are enabled for images.
